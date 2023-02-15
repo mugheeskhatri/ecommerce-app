@@ -36,6 +36,7 @@ const Index = (props) => {
         axios
           .get(`${API}/category/get/single/${res.data.categoryId}`)
           .then(async (res) => {
+            setShow(true);
             if (res.data.saleId) {
               await axios
                 .get(`${API}/categorySale/get/single/${res.data.saleId}`)
